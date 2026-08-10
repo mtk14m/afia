@@ -1,4 +1,4 @@
-.PHONY: build test lint run fmt vet
+.PHONY: build test lint run fmt vet docker-build
 
 BINARY   := afia-gateway
 VERSION  := $(shell git describe --tags --always --dirty 2>/dev/null || echo "dev")
@@ -21,3 +21,6 @@ fmt:
 
 vet:
 	go vet ./...
+
+docker-build:
+	docker build -t $(BINARY):$(VERSION) .
