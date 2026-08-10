@@ -1,6 +1,6 @@
 # afia — African Foundations for AI
 
-Sovereign LLM inference gateway for francophone Africa.
+Sovereign LLM inference gateway for Africa.
 
 > Documentation en français disponible dans [docs/](docs/).
 
