@@ -11,13 +11,13 @@ type Config struct {
 func Load() Config{
 	return Config{
 		Port: getEnv("PORT", "8080"),
-		VLLAddr: getEnv("VLLM_ADDR", "http://localhost:8080"),
+		VLLMAddr: getEnv("VLLM_ADDR", "http://localhost:8000"),
 		LogLevel: getEnv("LOG_LEVEL", "info"),
 	}
 }
 
 func getEnv(key, fallback string) string{
-	if v := os.GetEnv(key); v != "" {
+	if v := os.Getenv(key); v != "" {
 		return v
 	}
 	return fallback
